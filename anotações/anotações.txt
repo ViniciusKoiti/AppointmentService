@@ -1,0 +1,8 @@
+A forma que armazeremos os dados não necessariamente,
+deve ser a mesma forma que enviamos dados 
+
+A primeira coisa que deveriamos pensar durante o desenvolvimento 
+de uma nova aplicação deveria ser as nossas entidades, no entanto,
+nos entidades a nivel de código.
+
+CLIENTES, AGENDAMENTOS,HORARIOS, DISPONIBILIDADE   
