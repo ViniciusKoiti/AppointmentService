@@ -8,16 +8,20 @@ class Appointment {
         return this.props.customer;
     }
 
-    get startsAt(): string {
-        return this.props.customer;
+    get startsAt(): Date {
+        return this.props.startsAt;
     }
 
-    get endsAt(): string {
-        return this.props.customer;
+    get endsAt(): Date {
+        return this.props.endsAt;
     }
 
     constructor(props: AppointmentProps){
         const { startsAt, endsAt } = props;
+
+        if (startsAt <= new Date()) {
+            throw new Error("Invalid start date");
+        }
 
         if (endsAt <= startsAt){
             throw new Error("Invalid end date")
