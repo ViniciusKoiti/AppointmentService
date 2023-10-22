@@ -37,6 +37,26 @@ test('cannot create an appointment with date before start date'), () => {
             endsAt,
         })
     }).toThrow()
+}
+
+test('cannot create an appointment with date before start date'), () => {
+    const startsAt = new Date();
+    const endsAt = new Date();
+
+    const appointment = new Appointment({
+        customer: 'John Doe',
+        startsAt: startsAt,
+        endsAt: endsAt,
+    })
+
+
+    expect(() => {
+        return new Appointment({
+            customer: 'John Doe',
+            startsAt,
+            endsAt,
+        })
+    }).toThrow()
 
 
 }
