@@ -1,12 +1,12 @@
 import Appointment from "../../entities/apponintment";
-import { AppointmentRepository } from "../../repository/appointment/appointment-repository-interface";
 import { CreateAppointmentRequest } from "./create-appointment-request";
 import { CreateAppointmentResponse } from "./create-appointment-response";
+import {  } from "../../repository/appointment/appointment-repository";
 
 export class CreateAppointment{
 
     constructor(
-        private appointmentsRepository: AppointmentRepository
+        private appointmentsRepository: AppointmentRepository,
     ){}
    
     async execute({

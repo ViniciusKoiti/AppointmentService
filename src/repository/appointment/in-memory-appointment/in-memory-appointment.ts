@@ -1,6 +1,6 @@
 import { areIntervalsOverlapping } from "date-fns";
 import Appointment from "../../../entities/apponintment";
-import { AppointmentRepository } from "../appointment-repository-interface";
+import { AppointmentRepository } from "../appointment-repository";
 
 export class InMemoryAppointmentRepository implements AppointmentRepository{
    
@@ -10,7 +10,7 @@ export class InMemoryAppointmentRepository implements AppointmentRepository{
     async create(appointment: Appointment): Promise<void> {
         this.appointments.push(appointment);
     }
-    async save(appointment: Appointment): Promise<void> {
+    async save(appointment: Appointment): Promise<Appointment> {
         throw new Error("Method not implemented.");
     }
 
